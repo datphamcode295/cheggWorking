@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>frmexample</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+     <script type="text/javascript">
+     function Redirect() {
+                var  frm_name=$("#frm_name").val();
+                frm_name=frm_name.replace("chegg","nochegg");
+                var region=$("#region").val();
+                var url=frm_name;
+               window.location=url;
+            }
+     </script>
+</head>
+<body>
+<form id="sub_frm"  method = "get">
+  <div class="input-group">
+
+    <!--Enter Name with # afterwards-->
+    <input type ="text" class="form-control" id="frm_name" name="name"/>
+
+    <span class="input-group-btn">
+      <select name="region" id="region" class="form-control" style="width: 80px">
+        <option value = "us">United States</option>
+        <option value = "eu">Europe</option>
+        <option value = "cn">China</option>
+        <option value = "kr">Korea</option>
+      </select>
+    </span>
+
+    <span class="input-group-btn">
+      <button type="button" class="btn btn-royal" onclick="Redirect();">submit</button>
+    </span>
+  </div>    
+</form>
+</body>
+</html>
